@@ -1,13 +1,9 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+const navLinks = document.querySelectorAll('nav ul li a');
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+navLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const targetSection = document.getElementById(event.target.getAttribute('href').slice(1));
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  });
 });
-
-// Show current year in footer
-document.querySelector('footer p').innerText += new Date().getFullYear();
