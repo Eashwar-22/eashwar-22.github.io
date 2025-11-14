@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles from our App.jsx */
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+.horizontal-scroll-container::-webkit-scrollbar-track {
+  background: #f1f5f9; /* bg-slate-100 */
+  border-radius: 10px;
+}
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+  background: #94a3b8; /* bg-slate-400 */
+  border-radius: 10px;
+}
+.horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #64748b; /* bg-slate-500 */
+}
