@@ -1,0 +1,170 @@
+EASWARAN SUBRAMANIAN
+
+Tübingen, 72070 | +49 17688122318 | hariharaneaswaran@gmail.com | Github | LinkedIn
+
+SUMMARY
+
+As a dedicated professional and master's in Machine Learning student at Tübingen University, I am driven by the challenge
+of creating and scaling advanced AI systems. I am skilled in Python, SQL and have hands-on knowledge in building ML
+Models, automating workflows and translating complex data in meaningful insights across different domains. 
+
+
+My 3+ years of work experience in data science and machine learning has led me to a strong interest in MLOps,
+operationalising generative AI and predictive modeling, and I am focused on leveraging my skills to make a tangible
+impact by bringing cutting-edge models to life.
+
+TECHNICAL SKILLS
+
+Programming: Python (Pandas, NumPy, Flask), PHP, SQL, Java
+
+ML & Data: Pytorch, scikit-learn, LangChain, NLP, LLM, PostgreSQL
+
+Data Visualisation: matpotlib, seaborn, plotly, W&B
+
+Tools: JIRA, Microsoft Excel (VLOOKUP, Macros, Pivot Table), VS Code, Jupyter
+
+Deployment: Docker, SLURM, HPC, Git, API Integration
+
+Languages: English (C2), German (A2), Tamil (Native)
+
+
+EXPERIENCE
+Tübingen Institute for Medical Education, Tübingen, Germany
+Nov 2023 - Jul 2024 
+
+Research Student - Programming and Web Interface
+ 
+
+Created a web interface to analyse survey data from over 200 final-year medical students and nurses, providing
+educational insights. 
+
+Built an admin page with PHP and JavaScript and managed data storage and retrieval using MySQL.
+
+Developed interactive data visualisations using a library like Chart.js and Plotly to present complex survey results in an
+intuitive format.
+
+Implemented a secure user authentication system with session management to protect sensitive survey data and ensure
+access was restricted to authorised personnel using PHP and MySQL.
+
+
+Sony B.V. Stuttgart Technology Center, Stuttgart, Germany
+. Mar 2023 - Aug 2023
+
+Working Student - Machine Learning Engineer
+
+Supported the R&D with building a custom Neural Architecture Search (NAS) framework in PyTorch, running over 20
+comparative experiments to validate a projected performance increase of up to 20%.
+
+
+Optimised the end-to-end machine learning pipeline by developing efficient data preprocessing scripts and conducting
+systematic hyper-parameter tuning to find optimal network configurations.
+
+Managed the project's codebase using GitLab for version control, where I contributed to refactoring modules for
+improved efficiency and authored technical documentation for new components.
+
+
+
+Verloop.io, Bengaluru, India
+Mar 2022 - Sep 2022
+
+Data Analyst
+
+Applied NLP techniques, including topic modeling and sentiment analysis, to analyze and categorize thousands of user
+queries, identifying key customer pain points and behaviour patterns.
+
+Designed and built interactive dashboards using Matplotlib to provide the Customer Success team with real-time
+insights into chatbot performance and customer satisfaction KPIs.
+
+Developed and automated reporting pipelines in Python, which reduced the time required for weekly report generation
+by 70%, freeing up the team to focus on proactive customer engagement.
+
+Collaborated closely with the Customer Success and Product teams to present actionable findings, directly influencing
+the refinement of chatbot conversation flows and user experience strategy.
+
+Quantum AI Systems, Hyderabad, India
+Jan 2021 - Feb 2022 
+
+Machine Learning Intern
+
+Implemented and compared ConvLSTM and LRCN deep learning models for video classification, developing a data
+preprocessing pipeline with OpenCV and training the networks using TensorFlow and Keras.
+
+Adapted the models for a customer service use case and deployed the final solution into a user-friendly web interface
+using Flask.
+
+
+Tiger Analytics, Chennai, India
+.
+Jan 2020 - Nov 2021 
+
+Senior Data Analyst
+
+Supported a large-scale pricing strategy project for a major fast-food client, delivering optimal menu price
+recommendations that drove a projected 10-15% increase in revenue across more than 15 global markets.
+
+Developed and implemented a price optimisation model using Conjoint Analysis to simulate customer choice and
+forecast the impact of price changes on key business metrics like sales, revenue, and gross margin.
+
+Utilised the COBYLA (Constrained Optimisation by Linear Approximation) algorithm to solve complex, non-linear
+optimisation problems, balancing the objective of revenue maximisation against critical business constraints such as
+price ceilings and sales volume limits.
+
+Authored and refactored the project's analytical codebase in Python, enhancing its efficiency and scalability to handle
+diverse market data and complex modeling requirements.
+
+Conducted extensive scenario modeling and sensitivity analysis to evaluate hundreds of potential pricing strategies,
+providing the client with a clear understanding of the trade-offs between different business outcomes.
+
+Synthesised complex analytical findings into actionable market-level insights, leading communication and presenting
+strategic recommendations to senior client stakeholders and internal leadership teams.
+
+EDUCATION
+
+Tübingen University, Baden-Württemberg
+
+Oct 2022 - present
+
+
+Masters in Machine Learning
+
+Relevant Coursework: Deep Learning, Computer Vision, Probabilistic Machine Learning, Virtual Humans, Understanding
+LLMs, Automated Machine Learning and Hyper-parameter Optimisation
+
+
+
+Vellore Institute of Technology, Tamil Nadu, India
+Jun 2016 - Jul 2020
+
+Bachelor of Technology in Electronics and Communication Engineering
+
+Relevant Coursework: Advanced Micro-controllers, Data Structures and Algorithms, Machine Learning, Neural Networks,
+Applied Linear Algebra, Business Analytics
+
+
+RECENT PROJECTS
+Masters Thesis: Reproducing and Adapting the Hypencoder [In-Progress]
+
+Supervisor: Prof. Carsten Eickhoff - NLP Health Lab, Tübingen
+. Oct 2025 - present
+Reimplementing the Hypencoder framework, a novel Information Retrieval model that uses a hypernetwork to
+dynamically generate a query-specific neural network for more expressive relevance scoring.
+
+Analysing a graph-based greedy search algorithm to assess the trade-offs between retrieval speed and accuracy when
+compared against a traditional search approach on a large-scale document corpus.
+
+Investigating potential improvements to the model's architecture - The primary experiment focuses on adapting the qnet to accept multi-vector document representations instead of a single vector, aiming to enhance performance on
+complex and hard retrieval tasks.
+
+
+AI Agent Robustness Testing Framework
+
+Developed an automation framework to systematically evaluate the robustness of a ReAct-style LLM agent, testing its
+performance against various data corruption scenarios like shuffled column headers, missing values, etc.
+
+Engineered and refined the agent's prompts to improve its reasoning and tool-using capabilities, enabling it to correctly
+interpret corrupted data schemas and still answer questions accurately.
+
+Built the agent's architecture using the LangGraph library to create a cyclical graph of nodes representing the agent's
+state, and used Pandas for all data manipulation and analysis within the agent's tools.
+
+
