@@ -2,18 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom scrollbar styles from our App.jsx */
-.horizontal-scroll-container::-webkit-scrollbar {
-  height: 8px;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-primary antialiased;
+  }
 }
-.horizontal-scroll-container::-webkit-scrollbar-track {
-  background: #f1f5f9; /* bg-slate-100 */
-  border-radius: 10px;
+
+::selection {
+  @apply bg-primary text-white;
 }
-.horizontal-scroll-container::-webkit-scrollbar-thumb {
-  background: #94a3b8; /* bg-slate-400 */
-  border-radius: 10px;
+
+::-webkit-scrollbar {
+  width: 8px;
 }
-.horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
-  background: #64748b; /* bg-slate-500 */
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-300 rounded-full hover:bg-zinc-400 transition-colors;
 }

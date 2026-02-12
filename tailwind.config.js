@@ -7,9 +7,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        // This adds the 'Inter' font we used
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
+      colors: {
+        primary: '#18181b', // zinc-950
+        secondary: '#71717a', // zinc-500
+        background: '#ffffff',
+        surface: '#fafafa', // zinc-50
+      }
     },
   },
   plugins: [],
