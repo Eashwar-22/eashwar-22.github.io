@@ -3,9 +3,12 @@ import Section from './Section';
 import { ArrowUpRight } from 'lucide-react';
 
 const projectsData = [
-
-
-    
+    {
+        title: "B2AI Reverse Storefront",
+        description: "I built an agentic procurement system that transforms traditional e-commerce into a dynamic 'reverse auction' environment. Using a LangGraph-managed state machine, autonomous AI agents representing different sellers compete in real-time to win bulk deals. The system integrates Qdrant for semantic search, FastMCP for inventory grounding, and Groq for low-latency agent orchestration, all while enforcing strict financial guardrails.",
+        tags: ["LangGraph", "Groq", "FastMCP", "Qdrant", "Agentic AI"],
+        link: "https://github.com/Eashwar-22/b2ai_storefront"
+    },
     {
         title: "Reproducing the Paper: Hypencoder - Hypernetworks for Neural Information Retrieval",
         description: "I retrained the Hypencoder, a neural information retrieval system, from scratch. It generates a custom brain for every single query to grade documents token-by-token. It's a token level model that hunts for precise evidence instead of general topics—beating standard models like the Bi-encoder because it actually reads nuances of the details. End goal of the project is to prove that it cannot act as a universal approximator for all retrieval models, as claimed in the paper.",
@@ -64,7 +67,7 @@ const projectsData = [
     {
         title: "Reading Impact Analysis",
         description: "Does controversy sell? I (along with my friends) built a custom Selenium scraper to pull data for 40 years of bestsellers, defining 'controversy' mathematically based on rating variance. Our analysis found a strong negative correlation with ratings, but zero proof that controversy actually boosts sales.",
-        tags: ["Selenium", "Pandas","Matplotlib"],
+        tags: ["Selenium", "Pandas", "Matplotlib"],
         link: "https://github.com/Eashwar-22/reading-impact-analysis/tree/main"
     },
 ];
