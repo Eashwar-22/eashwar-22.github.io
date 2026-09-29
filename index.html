@@ -1,13 +1,26 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Easwaran Subramanian | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080808" />
+    <title>Eashwar</title>
+    <link rel="stylesheet" href="./styles.css?v=20260916-24" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header class="site-header">
+      <span class="signature" role="img" aria-label="Eashwar's signature"></span>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="site-nav__item site-nav__item--active" href="#home">HOME</a>
+        <a class="site-nav__item" href="#about">ABOUT</a>
+        <a class="site-nav__item" href="#projects">PROJECTS</a>
+        <a class="site-nav__item" href="#contact">CONTACT</a>
+      </nav>
+      <div class="scroll-data-rain" aria-hidden="true"></div>
+    </header>
+
+    <main id="site-content"></main>
+    <script src="./script.js?v=20260916-2"></script>
   </body>
 </html>

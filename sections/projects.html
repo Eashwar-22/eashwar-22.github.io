@@ -1,0 +1,115 @@
+<section class="projects" id="projects">
+  <h2 class="projects__heading">What's cooking?</h2>
+
+  <article class="project-sample">
+    <div class="project-sample__copy">
+      <span class="project-sample__number">01</span>
+      <h3>Adaptive LLM Gateway</h3>
+      <p>Routing decisions matter more than model choice.
+        I created a simple adaptive router to switch between cheap and expensive LLM models based on
+        prompt complexity and caching logic.<br>
+        What I used to control API Costs in a smart way - 1. Dynamic routing, 2. intent classification and 3. automated PII redaction.</p>
+      <div class="project-sample__languages">
+        <span class="project-sample__label">LANGUAGES</span>
+        <span class="project-sample__language">Python <b>•</b> TypeScript</span>
+      </div>
+
+      <a
+        class="project-sample__link"
+        href="https://github.com/Eashwar-22/adaptive_llm_router"
+      >VIEW CODE →</a>
+    </div>
+
+    <a class="project-sample__demo" href="https://frontend-two-omega-96.vercel.app/">
+      <img
+        class="project-sample__gif"
+        src="./project_samples/llm_router.png"
+        alt="Adaptive LLM Gateway interface demo"
+        loading="lazy"
+      />
+      <span class="project-sample__demo-label">View the demo</span>
+    </a>
+  </article>
+
+    <article class="project-sample">
+    <div class="project-sample__copy">
+      <span class="project-sample__number">02</span>
+      <h3>Agentic Run Visualizer</h3>
+      <p>Debugging long JSON files with agent traces could sometimes be frustrating.<br>
+        I created a wrapper over OpenAI Agents SDK to locally visualise the agent activity, 
+        record agent activity, tool calls, handoffs, errors, usage and artifacts, 
+        then replay the run in a dashboard without exposing private chain-of-thought. <br>
+        Work in progress - the package should soon be compatible with different agentic frameworks.
+      </p>
+      <div class="project-sample__languages">
+        <span class="project-sample__label">LANGUAGES</span>
+        <span class="project-sample__language">Python <b>•</b> JavaScript</span>
+      </div>
+
+      <a
+        class="project-sample__link"
+        href="https://github.com/Eashwar-22/agentarium"
+      >VIEW CODE →</a>
+    </div>
+
+    <a class="project-sample__demo" href="https://agentarium-five.vercel.app/">
+      <img
+        class="project-sample__gif"
+        src="./project_samples/agentarium.png"
+        alt="Agentarium demo"
+        loading="lazy"
+      />
+      <span class="project-sample__demo-label">View the demo</span>
+    </a>
+  </article>
+
+  <article class="project-sample">
+    <div class="project-sample__copy">
+      <span class="project-sample__number">03</span>
+      <h3>Hypencoder Reproduction - Master's Thesis</h3>
+      <p>Standard search models use bi-encoder dot product mechanism to score documents for every search query, 
+         that provides a linear approach to classifying document embeddings.
+        My thesis involves the reproduction and investigation of "Hypencoder", an 
+        information-retrieval model that uses a hypernetwork to generate query-specific scoring parameters.
+      </p>
+      <div class="project-sample__languages">
+        <span class="project-sample__label">LANGUAGES</span>
+        <span class="project-sample__language">Python (PyTorch)</span>
+      </div>
+
+      <a
+        class="project-sample__link"
+        href="https://github.com/Eashwar-22/Neural_Adaptability_Reproduction_of_Hypencoder"
+      >VIEW CODE →</a>
+    </div>
+
+    <a class="project-sample__demo"  href="https://hypencoder-study.vercel.app/">
+      <img
+        class="project-sample__gif"
+        src="./project_samples/hypencoder.jpg"
+        alt="Hypencoder"
+        loading="lazy"
+      />
+      <span class="project-sample__demo-label project-sample__demo-label--dark">View the walkthrough</span>
+    </a>
+  </article>
+
+  <article class="project-sample">
+    <div class="project-sample__copy">
+      <span class="project-sample__number">04</span>
+      <h3>"Nochmal" - Adaptive German Audio Learning System*</h3>
+      <p>
+        German audio can sound like a blur even when you know the words on paper.<br>
+      I just started building an adaptive listening app where learners first hear a short German passage,
+      unpack it sentence by sentence, and then listen to the exact same recording again to see what changed.<br>
+      Under the hood, it combines controlled LLM lesson generation (700+ lessons from A1-B1), German voice models, structured grammar
+      breakdowns, and a learner model that decides what each person should hear and review next.<br>
+      <span class="accent">Work in progress</span> - the long-term goal is to test whether that learning carries 
+      over to German the learner has never heard before.
+      </p>
+    </div>
+
+
+  </article>
+
+</section>
