@@ -408,13 +408,15 @@ a:focus-visible {
 .project-sample__gif {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   transition: transform 220ms ease, opacity 220ms ease;
 }
 
 .project-sample__demo {
   position: relative;
   display: block;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   background: #ffffff;
 }
