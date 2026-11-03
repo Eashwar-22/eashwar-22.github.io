@@ -3,24 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#080808" />
     <title>Eashwar</title>
-    <link rel="stylesheet" href="./styles.css?v=20260916-24" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="./dashboard.css?v=35" />
   </head>
   <body>
-    <header class="site-header">
-      <span class="signature" role="img" aria-label="Eashwar's signature"></span>
+    <main class="dashboard">
+      <header class="header">
+        <h1>Easwaran Subramanian</h1>
+        <nav aria-label="Primary navigation">
+          <a class="active" href="#home" aria-current="page">home</a>
+          <a href="#portfolio">portfolio</a>
+          <a href="#about">about</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A9 9 0 0 1 8.5 3.5a9 9 0 1 0 12 12Z"/></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M19.07 4.93l-1.42 1.42M6.35 17.65l-1.42 1.42"/></svg>
+        </button>
+      </header>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="site-nav__item site-nav__item--active" href="#home">HOME</a>
-        <a class="site-nav__item" href="#about">ABOUT</a>
-        <a class="site-nav__item" href="#projects">PROJECTS</a>
-        <a class="site-nav__item" href="#contact">CONTACT</a>
-      </nav>
-      <div class="scroll-data-rain" aria-hidden="true"></div>
-    </header>
+      <div class="page-viewport">
+        <div class="pages">
+          <section id="home" class="page">
+            <div class="profile">
+              <div class="portrait-placeholder">still waiting for<br /> a photographer</div>
+              <div class="socials">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/easwaran-subramanian-47ba68141/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="3"/><path fill="white" d="M7.1 9.6H4.2V19h2.9V9.6Zm.2-2.9c0-.9-.7-1.7-1.7-1.7S4 5.8 4 6.7s.7 1.7 1.6 1.7 1.7-.8 1.7-1.7ZM19.9 13.6c0-2.8-1.5-4.2-3.5-4.2-1.6 0-2.4.9-2.8 1.5V9.6h-2.9V19h2.9v-4.7c0-1.2.2-2.4 1.8-2.4 1.5 0 1.6 1.4 1.6 2.5V19h2.9v-5.4Z"/></svg></a>
+                <a target="_blank" rel="noopener noreferrer" href="mailto:hariharaneaswaran@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Eashwar-22" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.25c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg></a>
+                <a target="_blank" rel="noopener noreferrer" href="./resume/Easwaran_Resume_2026D.pdf" aria-label="Resume"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h9l5 5v15H5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 2v5h5M8 12h8M8 15h8M8 18h6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1D8oprmc9yRhnGSJOFj7GHGb8QZA5L1_B/view?usp=sharing" aria-label="Video resume"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 10 6-3v10l-6-3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
 
-    <main id="site-content"></main>
-    <script src="./script.js?v=20260916-2"></script>
+            <div class="bio">
+              <p>I’m <strong>Eashwar</strong>, a machine learning practitioner based in Berlin.<br />I work with data, math &amp; code.</p>
+              <p>I have worked in <strong>data science and machine learning for about 3 years</strong> where I helped building price models for optimisation, user interface, ETL, modeling and development around analytics.</p>
+              <p>In 2026, I graduated from Tübingen University, Germany with a <strong>master's degree in Machine Learning.</strong> My strong interest in <strong>LLMs and information retrieval</strong> led me to writing my thesis on a neural IR model with Tübingen's Health NLP Lab.</p>
+              <p>I make the most of my time building cool stuff with engineers while adapting to the fast-paced <strong>AI community in Berlin.</strong> Work aside, I spend time on making music, improv and sports, along many other things that I love to keep myself occupied with. I show passion for my work and I am always excited to share thoughts with whoever I meet.</p>
+              <p>Can't wait for what's ahead in the coming days!</p>
+            </div>
+          </section>
+
+          <section id="portfolio" class="page portfolio-content" aria-label="Portfolio">
+            <h2>Recent work (2026)</h2>
+
+            <article class="project-row">
+              <h3 class="project-title">Nochmal - Adaptive German Audio Learning System</h3>
+              <div class="project-detail">
+                <p>I got tired of Duolingo's gamification so I built my own German learning app, combining listening, grammar study and speaking practice. A custom lesson compiler turns CEFR curriculum data into vocabulary breakdowns, conjugations and explanations.</p>
+                <p>I then developed a speech evaluation pipeline that combines structured LLM feedback, deterministic scoring and signal-based audio analysis. It preserves grammatical mistakes during transcription and accepts valid paraphrases, with regression tests covering omissions, grammar, transcription and pauses.</p>
+                <div class="project-tools">
+                  <span><i class="python-logo" aria-hidden="true"></i>Python</span>
+                  <span><i class="pydantic-logo" aria-hidden="true"></i>Pydantic</span>
+                  <span><i class="cloudflare-logo" aria-hidden="true"></i>Cloudflare</span>
+                  <span><i class="elevenlabs-logo" aria-hidden="true"></i>ElevenLabs</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Eashwar-22/Nochmal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.25c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>code</a>
+                  <a href="https://nochmal-1f1.pages.dev/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m10 7 7 5-7 5z" fill="var(--play-color, #fff)"/></svg>app</a>
+                </div>
+                <section class="nochmal-carousel" aria-label="Scroll through Nochmal mobile screenshots" tabindex="0">
+                  <div class="nochmal-phone"><img class="nochmal-screen" src="./pics/nochmal-listening.png" alt="Nochmal mobile listening screen with audio playback and speed controls." width="780" height="1450" loading="lazy" /></div>
+                  <div class="nochmal-phone"><img class="nochmal-screen" src="./pics/nochmal-vocabulary.png" alt="Nochmal mobile vocabulary screen with lesson filters and German-English search." width="780" height="1450" loading="lazy" /></div>
+                  <div class="nochmal-phone"><img class="nochmal-screen" src="./pics/nochmal-speaking.png" alt="Nochmal mobile speaking screen with a translation prompt and recording button." width="780" height="1450" loading="lazy" /></div>
+                </section>
+              </div>
+            </article>
+
+            <article class="project-row">
+              <h3 class="project-title">Neural Adaptability: Hypencoder Reproduction &amp; Verification</h3>
+              <div class="project-intro"><p>Standard search models use bi-encoder dot product mechanism to score documents for every search query, that provides a linear approach to classifying document embeddings.</p></div>
+              <div class="project-detail">
+                <p>The paper involves the reproduction and investigation of "Hypencoder", an information-retrieval model that uses a hyper-network to generate query-specific scoring parameters.</p>
+                <div class="project-tools">
+                  <span><i class="python-logo" aria-hidden="true"></i>Python</span>
+                  <span><i class="pytorch-logo" aria-hidden="true"></i>PyTorch</span>
+                  <span><i class="slurm-logo" aria-hidden="true"></i>SLURM</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Eashwar-22/Neural_Adaptability_Reproduction_of_Hypencoder" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.25c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>code</a>
+                  <a href="https://hypencoder-study.vercel.app/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m10 7 7 5-7 5z" fill="var(--play-color, #fff)"/></svg>walkthrough</a>
+                  <a href="https://hypencoder-study.vercel.app/assets/thesis.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h9l5 5v15H5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 2v5h5M8 12h8M8 15h8M8 18h6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>paper</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-row">
+              <h3 class="project-title">Signalz - Sales Hiring Intelligence</h3>
+              <div class="project-intro"><p>Built at a GTM hackathon, the product scans public job postings for early sales-growth signals, such as a company hiring both a sales manager and individual contributor or a founding sales/GTM hire.</p></div>
+              <div class="project-detail">
+                <p>n8n orchestrates Apify searches, Featherless LLM groups jobs by company and explains “why now.” A live run processed 20 jobs, identified 15 companies and surfaced 8 qualified signals.</p>
+                <p>Placed third in the hackathon.</p>
+                <div class="project-tools">
+                  <span><i class="n8n-logo" aria-hidden="true"></i>n8n</span>
+                  <span><i class="apify-logo" aria-hidden="true"></i>Apify</span>
+                  <span><i class="featherless-logo" aria-hidden="true"></i>Featherless LLM</span>
+                  <span><i class="supabase-logo" aria-hidden="true"></i>Supabase</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Eashwar-22/signalz" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.25c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>code</a>
+                  <a href="https://signalz.vercel.app/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>app</a>
+                </div>
+                <iframe class="signalz-video" src="https://www.loom.com/embed/a17b9c3932df4b2a8561bb943a2058a8" title="Signalz project walkthrough" width="1280" height="720" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </article>
+
+            <article class="project-row">
+              <h3 class="project-title">Agoks - Agentic Run Visualiser</h3>
+              <div class="project-intro"><p>I built a local visual debugger for agentic workflows that turns recorded activity into a clear, task-by-task run story.</p></div>
+              <div class="project-detail">
+                <p>Developers can follow tool calls, handoffs, outputs and explicitly linked evidence, then replay and compare saved recordings without rerunning the workflow.</p>
+                <p>Its focus is a lightweight recording workspace: portable JSONL files, a static browser viewer and built-in integrity and budget checks, rather than a full observability platform like Langfuse, Langsmitch, etc.</p>
+                <div class="project-tools">
+                  <span><i class="python-logo" aria-hidden="true"></i>Python</span>
+                  <span><i class="fastapi-logo" aria-hidden="true"></i>FastAPI</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Eashwar-22/agentarium" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.25c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>code</a>
+                  <a href="https://agoks-viewer.vercel.app/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>app</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-row">
+              <h3 class="project-title">Tagly - an Atech Home Assistant</h3>
+              <div class="project-intro"><p>At the OpenAI Berlin Hackathon, my team built a local home-assistance prototype developed around a physical button-and-voice device. It connects the device to a medication confirmation log, spoken reminders, voice requests and a staff dashboard.</p></div>
+              <div class="project-detail">
+                <div class="project-links">
+                  <a href="https://github.com/schmijul/tagly" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.25c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>code</a>
+                </div>
+                <iframe class="tagly-video" src="https://drive.google.com/file/d/1BYkQchMGHiOkCnR9CWEHVgmSFBsHTvoS/preview" title="Tagly project video" width="1280" height="720" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
+              </div>
+            </article>
+          </section>
+
+          <section id="contact" class="page" aria-label="Contact"></section>
+
+          <section id="about" class="page about-content" aria-label="About">
+            <h2>About me</h2>
+            <ul>
+              <li>I come from India - between 2020 and 2022 I worked in DS &amp; ML.</li>
+              <li>Life in Germany - I spent the last 3 years in Tübingen finishing my Masters in Machine Learning. <strong>Now in Berlin.</strong></li>
+              <li>Friends back in town keep asking me if I’m living the “Berlin life” - to me that means spending most of the time in the tech space and taking part in their events &amp; hackathons (späti days happen too) - so my answer is yes!</li>
+              <li>One thing I decided to develop after coming here - <strong>confidence in public speaking &amp; building a network.</strong> I have been taking part in improv &amp; running club events - this is surprisingly where I get to develop such skills, around fascinating people who are mostly founders &amp; engineers.</li>
+              <li>In order to make the best use of my free time, I spend hours in the library everyday developing my tech skills, building my portfolio and improving my German proficiency.</li>
+            </ul>
+
+
+
+            <h2>Work experience</h2>
+            <ul>
+              <li>Data Science @ <strong>Tiger Analytics, India</strong> (price optimisation, market analytics, demand analysis)</li>
+              <li>Data Science @ <strong>Verloop, India</strong> (conversational AI, business intelligence)</li>
+              <li>Machine Learning Intern @ <strong>Sony, Germany</strong> (neural architecture search, model optimisation)</li>
+              <li>Data Research Intern @ <strong>Tübingen Institute for Medical Education, Germany</strong> (medical education, survey analytics)</li>
+            </ul>
+
+            <h2>What do I enjoy working on?</h2>
+            <ul>
+              <li>Optimising &amp; refactoring codebase - I love the process of turning O(n^2) to O(n) with neat indentations, I still don’t rely on AI to do this.</li>
+              <li>I love building apps for personal use cases - agentic stuff running on the background within the local system is a lovely thing to happen in 2026.</li>
+              <li>Reaching out to bootstrapping startups to give them an extra hand in backend work; took me a while to find out that a lot of new companies don’t start with CTOs.</li>
+              <li>Music - I play the piano and I also break down track samples on a DAW (Digital audio workstation) to practice mixing with different components. I love this stuff!</li>
+              <li>In general, I love working with people that are better than me - technically, philosophically, in lifestyle choices, the way they dress, etc. I never want to let my learning curve become saturated and it feels nice to stay curious around such people.</li>
+              <li>My thoughts on using AI - Being an aspiring AI Engineer myself, I value lesser automations to work on projects and communicate with people.
+                I don't mind making mistakes in my emails/cold messages/code reports, etc. as long as I know that I'm not depending too much on AI, unless there is an opportunity to save time in automations.
+              Truth be told, I defintely used AI to make this website - I'm no front-end developer.</li>
+            </ul>
+
+
+
+            <h2>Status</h2>
+            <ul>
+              <li>Looking for work opportunities in <strong>AI/ML/Data Engineering</strong> in Germany, preferrably in Berlin.</li>
+              <li>I'm on post-graduation <strong>job seeking visa, no sponsorship required.</strong></li>
+              <li>English proficiency - Native; German proficiency - B1</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="./dashboard.js?v=9"></script>
   </body>
 </html>
