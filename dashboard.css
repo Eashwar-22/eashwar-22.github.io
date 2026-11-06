@@ -195,3 +195,10 @@ iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border
 .openai-day[data-level="4"] { background: #c16246; }
 .openai-status { font: 14px/1.5 var(--mono); margin: 14px 0 0; }
 @media (max-width: 900px) { .activity-pair { grid-template-columns: 1fr; gap: 0; } }
+
+.codex-activity { padding: 24px 0 28px; border-top: 1px solid #24242145; }
+.codex-activity h3 { font-size: 22px; font-weight: 500; letter-spacing: -.5px; margin: 0 0 18px; }
+.codex-totals { display: flex; flex-wrap: wrap; gap: 14px 42px; font: 14px/1.5 var(--mono); }
+.codex-totals p { margin: 0; }
+.codex-totals strong { font-weight: 600; margin-left: 8px; }
+.codex-status { font: 14px/1.5 var(--mono); margin: 12px 0 0; }

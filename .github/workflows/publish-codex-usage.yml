@@ -1,0 +1,36 @@
+name: Publish Codex usage
+
+on:
+  workflow_dispatch:
+    inputs:
+      aggregate:
+        description: Aggregated Codex token totals
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: codex-usage
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and save aggregate
+        env:
+          CODEX_USAGE_AGGREGATE: ${{ inputs.aggregate }}
+        run: python3 scripts/store_codex_usage.py
+      - name: Publish aggregate
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add codex-usage.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update Codex usage totals'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

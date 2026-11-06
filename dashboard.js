@@ -198,3 +198,32 @@ async function loadOpenAIActivity() {
   }
 }
 loadOpenAIActivity();
+
+async function loadCodexActivity() {
+  const input = document.getElementById('codex-input');
+  const output = document.getElementById('codex-output');
+  const status = document.getElementById('codex-status');
+  if (!input || !output || !status) return;
+  const remote = 'https://raw.githubusercontent.com/Eashwar-22/eashwar-22.github.io/main/codex-usage.json';
+  try {
+    let response;
+    try { response = await fetch(`${remote}?day=${new Date().toISOString().slice(0, 10)}`); }
+    catch { /* The locally generated snapshot is still available for preview. */ }
+    if (!response || !response.ok) response = await fetch('./codex-usage.json');
+    if (!response.ok) throw new Error('Activity not available');
+    const data = await response.json();
+    if (!Number.isSafeInteger(data.input_tokens) || data.input_tokens < 0 ||
+        !Number.isSafeInteger(data.output_tokens) || data.output_tokens < 0 ||
+        !/^\d{4}-\d{2}-\d{2}$/.test(data.period_end)) throw new Error('Invalid activity data');
+    input.textContent = data.input_tokens.toLocaleString();
+    output.textContent = data.output_tokens.toLocaleString();
+    const stale = data.period_end < dayString(utcDay(new Date()));
+    status.textContent = data.incomplete ? 'This Mac · some recorded usage may be missing' :
+      stale ? 'This Mac · update pending' : 'This Mac · last 3 months';
+  } catch {
+    input.textContent = '—';
+    output.textContent = '—';
+    status.textContent = 'Codex activity is not available yet.';
+  }
+}
+loadCodexActivity();
