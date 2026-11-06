@@ -9,7 +9,24 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23242421'/%3E%3Ctext x='14' y='48' fill='%23f17b58' font-family='Arial' font-weight='bold' font-size='48'%3Ee%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="dashboard.css?v=84">
   <script src="dashboard.js?v=84" defer></script>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "652b646d73d14414abdba8d8107ec4c9"}'></script><!-- End Cloudflare Web Analytics -->
+  <script>
+    let excludeAnalytics = false;
+    try {
+      if (location.hash === '#exclude-analytics' || location.hash === '#include-analytics') {
+        if (location.hash === '#exclude-analytics') localStorage.setItem('exclude-analytics', 'true');
+        else localStorage.removeItem('exclude-analytics');
+        history.replaceState(null, '', location.pathname + location.search);
+      }
+      excludeAnalytics = localStorage.getItem('exclude-analytics') === 'true';
+    } catch (_) { /* Load analytics normally if browser storage is unavailable. */ }
+    if (!excludeAnalytics) {
+      const beacon = document.createElement('script');
+      beacon.type = 'module';
+      beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+      beacon.setAttribute('data-cf-beacon', '{"token": "652b646d73d14414abdba8d8107ec4c9"}');
+      document.head.appendChild(beacon);
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#portfolio">Skip to portfolio</a>
