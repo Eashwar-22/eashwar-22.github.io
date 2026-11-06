@@ -170,3 +170,21 @@ iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border
 .status-light { width: 9px; height: 9px; border-radius: 50%; background: #22a451; animation: status-blink 1.5s ease-in-out infinite; }
 @keyframes status-blink { 0%, 100% { opacity: 1; } 50% { opacity: .2; } }
 @media (prefers-reduced-motion: reduce) { .status-light { animation: none; } }
+
+.github-activity { padding: 8px 0 30px; }
+.github-activity h3 { font-size: 18px; font-weight: 500; margin: 0 0 18px; }
+.github-activity a { display: block; max-width: 850px; overflow-x: auto; }
+.github-activity img { display: block; width: 100%; min-width: 620px; height: auto; }
+
+.openai-activity { padding: 8px 0 30px; }
+.openai-activity h3 { font-size: 18px; font-weight: 500; margin: 0 0 18px; }
+.openai-activity-scroll { max-width: 850px; overflow-x: auto; }
+.openai-calendar { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 12px); grid-auto-columns: 12px; gap: 3px; width: max-content; }
+.openai-calendar:empty { display: none; }
+.openai-day { width: 12px; height: 12px; border-radius: 2px; background: #d9dcd6; }
+.openai-day[data-level="unknown"] { background: transparent; outline: 1px solid #a5a89f; outline-offset: -1px; }
+.openai-day[data-level="1"] { background: #a9d7b4; }
+.openai-day[data-level="2"] { background: #67b780; }
+.openai-day[data-level="3"] { background: #348a51; }
+.openai-day[data-level="4"] { background: #1c5f37; }
+.openai-status { font-size: 14px; line-height: 1.5; margin: 12px 0 0; }

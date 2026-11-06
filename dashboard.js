@@ -92,3 +92,47 @@ document.querySelectorAll('.project-entry').forEach(project => {
   });
 });
 route();
+
+async function loadOpenAIActivity() {
+  const calendar = document.getElementById('openai-calendar');
+  const status = document.getElementById('openai-status');
+  if (!calendar || !status) return;
+  try {
+    const url = 'https://raw.githubusercontent.com/Eashwar-22/eashwar-22.github.io/main/openai-usage.json';
+    const response = await fetch(`${url}?day=${new Date().toISOString().slice(0, 10)}`);
+    if (!response.ok) throw new Error('Activity not available');
+    const data = await response.json();
+    if (!Array.isArray(data.days) || !data.days.length || data.days.length > 366 ||
+        data.days.some(day => !/^\d{4}-\d{2}-\d{2}$/.test(day.date) ||
+          (day.requests !== null && (!Number.isSafeInteger(day.requests) || day.requests < 0)))) {
+      throw new Error('Invalid activity data');
+    }
+    const fragment = document.createDocumentFragment();
+    const firstWeekday = new Date(`${data.days[0].date}T00:00:00Z`).getUTCDay();
+    for (let i = 0; i < firstWeekday; i++) {
+      const blank = document.createElement('span');
+      blank.setAttribute('aria-hidden', 'true');
+      fragment.append(blank);
+    }
+    let total = 0;
+    let missing = 0;
+    data.days.forEach(day => {
+      const cell = document.createElement('span');
+      cell.className = 'openai-day';
+      const n = day.requests;
+      cell.dataset.level = n === null ? 'unknown' : n === 0 ? '0' : n < 3 ? '1' : n < 10 ? '2' : n < 30 ? '3' : '4';
+      cell.title = n === null ? `${day.date}: data unavailable` : `${day.date}: ${n} ${n === 1 ? 'request' : 'requests'}`;
+      if (n === null) missing++;
+      else total += n;
+      fragment.append(cell);
+    });
+    calendar.replaceChildren(fragment);
+    const summary = `${total.toLocaleString()} model requests in the past year (UTC)${missing ? `; ${missing} days unavailable` : ''}.`;
+    calendar.setAttribute('aria-label', summary);
+    status.textContent = summary;
+  } catch {
+    calendar.replaceChildren();
+    status.textContent = 'OpenAI activity is not available yet.';
+  }
+}
+loadOpenAIActivity();
