@@ -93,6 +93,59 @@ document.querySelectorAll('.project-entry').forEach(project => {
 });
 route();
 
+const DAY_MS = 24 * 60 * 60 * 1000;
+function utcDay(date) {
+  return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+}
+function threeMonthsBefore(date) {
+  const start = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() - 3, 1));
+  const lastDay = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + 1, 0)).getUTCDate();
+  start.setUTCDate(Math.min(date.getUTCDate(), lastDay));
+  return start;
+}
+function dayString(date) { return date.toISOString().slice(0, 10); }
+function renderMonths(container, dates, firstWeekday) {
+  const labels = new Map();
+  let lastMonth = '';
+  dates.forEach((day, index) => {
+    const month = day.slice(0, 7);
+    if (month === lastMonth) return;
+    const column = Math.floor((index + firstWeekday) / 7) + 1;
+    const label = new Intl.DateTimeFormat('en', { month: 'short', timeZone: 'UTC' }).format(new Date(`${day}T00:00:00Z`));
+    labels.set(column, label);
+    lastMonth = month;
+  });
+  container.replaceChildren();
+  container.style.setProperty('--calendar-weeks', Math.ceil((dates.length + firstWeekday) / 7));
+  labels.forEach((label, column) => {
+    const marker = document.createElement('span');
+    marker.style.gridColumn = column;
+    marker.textContent = label;
+    container.append(marker);
+  });
+}
+function cropGitHubActivity() {
+  const today = utcDay(new Date());
+  const cutoff = threeMonthsBefore(today);
+  const firstShownWeek = new Date(cutoff.getTime() - cutoff.getUTCDay() * DAY_MS);
+  // The chart service renders a rolling year, starting on the preceding Sunday.
+  const firstDate = new Date(today.getTime() - 364 * DAY_MS);
+  const firstChartWeek = new Date(firstDate.getTime() - firstDate.getUTCDay() * DAY_MS);
+  const hiddenWeeks = Math.round((firstShownWeek - firstChartWeek) / (7 * DAY_MS));
+  const days = Math.round((today - cutoff) / DAY_MS) + 1;
+  const weeks = Math.ceil((days + cutoff.getUTCDay()) / 7);
+  const window = document.getElementById('github-chart-window');
+  const image = document.getElementById('github-chart');
+  if (!window || !image || hiddenWeeks < 0 || weeks < 1) return;
+  window.style.width = `${weeks * 15}px`;
+  image.style.left = `${-(27 + hiddenWeeks * 12) * 1.25}px`;
+  const firstRow = cutoff.getUTCDay() * 15;
+  window.style.clipPath = `polygon(0 ${firstRow}px, 15px ${firstRow}px, 15px 0, 100% 0, 100% 100%, 0 100%)`;
+  const dates = Array.from({ length: days }, (_, index) => dayString(new Date(cutoff.getTime() + index * DAY_MS)));
+  renderMonths(document.getElementById('github-months'), dates, cutoff.getUTCDay());
+}
+cropGitHubActivity();
+
 async function loadOpenAIActivity() {
   const calendar = document.getElementById('openai-calendar');
   const status = document.getElementById('openai-status');
@@ -107,8 +160,14 @@ async function loadOpenAIActivity() {
           (day.requests !== null && (!Number.isSafeInteger(day.requests) || day.requests < 0)))) {
       throw new Error('Invalid activity data');
     }
+    const today = utcDay(new Date());
+    const cutoff = dayString(threeMonthsBefore(today));
+    const days = data.days.filter(day => day.date >= cutoff && day.date <= dayString(today));
+    if (!days.length) throw new Error('Activity not available');
     const fragment = document.createDocumentFragment();
-    const firstWeekday = new Date(`${data.days[0].date}T00:00:00Z`).getUTCDay();
+    const months = document.getElementById('openai-months');
+    const timeline = document.getElementById('openai-timeline');
+    const firstWeekday = new Date(`${days[0].date}T00:00:00Z`).getUTCDay();
     for (let i = 0; i < firstWeekday; i++) {
       const blank = document.createElement('span');
       blank.setAttribute('aria-hidden', 'true');
@@ -116,7 +175,7 @@ async function loadOpenAIActivity() {
     }
     let total = 0;
     let missing = 0;
-    data.days.forEach(day => {
+    days.forEach(day => {
       const cell = document.createElement('span');
       cell.className = 'openai-day';
       const n = day.requests;
@@ -127,11 +186,14 @@ async function loadOpenAIActivity() {
       fragment.append(cell);
     });
     calendar.replaceChildren(fragment);
-    const summary = `${total.toLocaleString()} model requests in the past year (UTC)${missing ? `; ${missing} days unavailable` : ''}.`;
+    renderMonths(months, days.map(day => day.date), firstWeekday);
+    timeline.hidden = false;
+    const summary = `${total.toLocaleString()} model requests${missing ? ` · ${missing} days unavailable` : ''}`;
     calendar.setAttribute('aria-label', summary);
     status.textContent = summary;
   } catch {
     calendar.replaceChildren();
+    document.getElementById('openai-timeline').hidden = true;
     status.textContent = 'OpenAI activity is not available yet.';
   }
 }
